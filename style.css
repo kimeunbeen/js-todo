@@ -42,3 +42,7 @@ body {
   justify-content: space-between;
   padding: 1em;
 }
+
+.isDone {
+  text-decoration: line-through;
+}
