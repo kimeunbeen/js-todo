@@ -61,6 +61,20 @@ function toggle(id) {
     }
   }
 
+  filterList = [];
+  for (let i = 0; i < todoList.length; i++) {
+    if (mode === "complete") {
+      if (todoList[i].isDone === true) {
+        filterList.push(todoList[i]);
+      }
+    } else {
+      // all or isProgress
+      if (todoList[i].isDone === false) {
+        filterList.push(todoList[i]);
+      }
+    }
+  }
+
   render();
 }
 
@@ -89,8 +103,8 @@ function render() {
   let resultHTML = "";
   for (let i = 0; i < viewList.length; i++) {
     if (viewList[i].isDone == true) {
-      resultHTML += `<div class="todo">
-            <div class="isDone">${viewList[i].todoContent}</div>
+      resultHTML += `<div class="todo todoDone">
+            <div class="todoDone">${viewList[i].todoContent}</div>
             <div>
               <button class="complete" onclick="toggle('${viewList[i].id}')"></button>
               <button class="delete" onclick="deleteTodo('${viewList[i].id}')"></button>

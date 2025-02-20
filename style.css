@@ -56,13 +56,14 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0.7em;
+  align-items: center;
 }
 
-.todo .isDone {
+.todoDone {
   background-color: lightgrey;
 }
 
-.isDone {
+.todoDone div:first-child {
   text-decoration: line-through;
 }
 
