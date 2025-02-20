@@ -1,4 +1,6 @@
 body {
+  font-family: "Dongle";
+  word-spacing: 0.5em;
   margin: 0;
   background-image: url("image/images.jpg");
   background-repeat: no-repeat;
@@ -7,11 +9,19 @@ body {
 
 .container {
   background-color: rgb(255, 225, 225);
-  min-height: 100vh;
+  min-width: 50vh;
+  max-width: 70vh;
+  min-height: 90vh;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
     rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  margin-top: 2em;
+  padding-top: 20px;
 }
 
+.container h1 {
+  font-size: 50px;
+  height: 50px;
+}
 .taskArea {
   border: 2px solid rgb(255, 176, 176);
   border-radius: 5px;
@@ -22,27 +32,92 @@ body {
   border: none;
   border-bottom: 1px solid rgb(196, 196, 196);
   position: relative;
+  gap: 20px;
 }
 
 .tabs div {
   padding: 1em;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px;
 }
 
 #underline {
   height: 3px;
   background-color: #e3a5c7;
   position: absolute;
-  width: 70px;
+  width: 60px;
   left: 0px;
-  top: 53px;
+  top: 47px;
   padding: 0px;
+  transition: 0.3s;
 }
 .todo {
   display: flex;
   justify-content: space-between;
-  padding: 1em;
+  padding: 0.7em;
+}
+
+.todo .isDone {
+  background-color: lightgrey;
 }
 
 .isDone {
   text-decoration: line-through;
+}
+
+.inputArea {
+  display: flex;
+  align-items: center;
+}
+
+.inputArea input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.inputArea button {
+  height: 45px;
+  width: 45px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: inherit;
+  background-image: url("image/create.png");
+  background-size: cover;
+}
+
+.todo button {
+  height: 28px;
+  width: 28px;
+  /* margin-left: 10px;
+  margin-bottom: 10px; */
+  border: none;
+  background-color: inherit;
+  background-image: url("image/create.png");
+  background-size: cover;
+}
+
+.todo .complete {
+  border: none;
+  background-color: inherit;
+  background-image: url("image/modify.png");
+  background-size: cover;
+}
+
+.todo .check {
+  border: none;
+  background-color: inherit;
+  background-image: url("image/complete.png");
+  background-size: cover;
+}
+
+.todo .delete {
+  border: none;
+  background-color: inherit;
+  background-image: url("image/delete.png");
+  background-size: cover;
 }
